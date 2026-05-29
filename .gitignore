@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+dist-ssr/
+**/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor & OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.local
+
+# Vite
+**/.vite/
+
+# Unused certificate assets (not shown in UI)
+app/public/images/certs/
+app/public/images/experience/
+app/public/images/portrait2.jpg
+
+# TypeScript cache
+*.tsbuildinfo
