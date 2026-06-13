@@ -26,10 +26,13 @@ npm-debug.log*
 # Vite
 **/.vite/
 
+# Local leftover from the previous nested checkout
+app/
+
 # Unused certificate assets (not shown in UI)
-app/public/images/certs/
-app/public/images/experience/
-app/public/images/portrait2.jpg
+public/images/certs/
+public/images/experience/
+public/images/portrait2.jpg
 
 # TypeScript cache
 *.tsbuildinfo
