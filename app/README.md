@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Portfolio — Cyber / Endfield Theme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio pribadi bertema cyber / Endfield. Full custom brutalist design dengan animasi scroll-driven, hex-grid canvas, text scramble effects, dan holographic card interactions.
 
-Currently, two official plugins are available:
+**Live site:** [malikfajar.me](https://malikfajar.me)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fitur
 
-## React Compiler
+- Preloader dengan glitch progress bar & reveal animation
+- Hex-grid canvas interaktif (mengikuti pergerakan mouse)
+- Text scramble / decode effect pada navigasi dan heading
+- Holographic project cards dengan 3D tilt
+- Skills terminal dengan hex-cluster chart
+- Smooth scroll (Lenis) + GSAP ScrollTrigger animations
+- Custom cursor & scan lines overlay
+- Terminal-style contact section
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Credits
 
-## Expanding the ESLint configuration
+Proyek ini dikembangkan bersama:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Kontributor | Peran |
+|-------------|--------|
+| **Muhammad Malik Fajar El-Syarif** | Pemilik portfolio, konten, dan data profil |
+| **Kimi AI** | Desain awal, spesifikasi teknis, dan scaffolding proyek |
+| **Cursor AI** | Implementasi, integrasi data, dan penyempurnaan build |
+| **Codex** | Dokumentasi, maintenance repo, dan workflow GitHub |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Struktur
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+├── README.md              # Dokumen ini
+├── tech-spec.md           # Spesifikasi desain & animasi
+└── app/                   # Aplikasi React (Vite)
+    ├── src/
+    │   ├── components/    # Komponen UI & layout
+    │   ├── sections/      # Hero, Skills, Projects, Contact
+    │   ├── hooks/         # Custom hooks (scramble, cursor, dll)
+    │   └── App.tsx
+    ├── public/
+    ├── tailwind.config.js
+    ├── vite.config.ts
+    └── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Menjalankan secara lokal
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd app
+npm install
+npm run dev
 ```
+
+Lint:
+
+```bash
+cd app
+npm run lint
+```
+
+Build produksi:
+
+```bash
+cd app
+npm run build
+npm run preview
+```
+
+## Tech stack
+
+- **React 19** + TypeScript
+- **Vite 7**
+- **Tailwind CSS 3**
+- **GSAP 3** (ScrollTrigger) — animasi utama
+- **Lenis** — smooth scroll
+- **Radix UI** — primitive components
+- **Lucide React** — ikon navigasi
+- **shadcn/ui** — komponen UI berbasis Radix
+
+## Dokumentasi tambahan
+
+Lihat [tech-spec.md](./tech-spec.md) untuk detail implementasi animasi, daftar komponen, dan keputusan teknis.
+
+## Lisensi
+
+© Muhammad Malik Fajar El-Syarif. Kode dapat digunakan sebagai referensi; mohon cantumkan kredit jika di-fork.
