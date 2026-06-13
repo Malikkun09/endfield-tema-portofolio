@@ -24,6 +24,7 @@ Proyek ini dikembangkan bersama:
 | **Muhammad Malik Fajar El-Syarif** | Pemilik portfolio, konten, dan data profil |
 | **Kimi AI** | Desain awal, spesifikasi teknis, dan scaffolding proyek |
 | **Cursor AI** | Implementasi, integrasi data, dan penyempurnaan build |
+| **Codex** | Dokumentasi, maintenance repo, dan workflow GitHub |
 
 ## Struktur
 
